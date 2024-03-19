@@ -5,7 +5,7 @@ from web.styles.styles import Size
 LOCAL_ICONS = ["x", "discord"]
 
 
-def button(url: str, text="", icon="chevron-right", secondary=False) -> rx.Component:
+def button(url: str, text="", icon="chevron-right", secondary=False, is_external=True) -> rx.Component:
     return rx.link(
         rx.button(
             _button_icon(icon),
@@ -15,7 +15,7 @@ def button(url: str, text="", icon="chevron-right", secondary=False) -> rx.Compo
             background=Color.SECONDARY.value if secondary else Color.ACCENT.value
         ),
         href=url,
-        is_external=True
+        is_external=is_external
     )
 
 # Por algo que desconozco (quizás un error), aunque el icon sea local, se intenta inicializar rx.icon. De ahí este fix.

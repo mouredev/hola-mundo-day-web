@@ -13,7 +13,7 @@ def speakers() -> rx.Component:
     return rx.vstack(
         terminal_text(quoted_text="Charlas y talleres"),
         text(
-            "NO se han admiten propuestas de personas con experiencia como ponentes.",
+            "NO se admiten propuestas de personas con experiencia como ponentes.",
             True, True, Color.ACCENT
         ),
         rx.text("En el \"Hola Mundo\" day la comunidad es la protagonista. No hace falta que tengas años de experiencia en el sector o te dediques profesionalmente a dar ponencias. Aquí no hay limitaciones. No importa si has comenzado a estudiar o llevas programando desde hace décadas."),

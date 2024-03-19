@@ -14,7 +14,12 @@ def navbar() -> rx.Component:
                 color=Color.ACCENT.value
             ),
             rx.spacer(),
-            button("./#speakers", "Participa", icon="file-input"),
+            button(
+                "./#speakers",
+                "Participa",
+                icon="file-input",
+                is_external=False
+            ),
             button(constants.TWITCH_URL, icon="twitch"),
             spacing=Size.DEFAULT.value,
             padding=SizeEM.DEFAULT.value,

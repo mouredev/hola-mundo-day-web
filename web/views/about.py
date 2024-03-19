@@ -11,7 +11,7 @@ from web.styles.styles import Size
 def about() -> rx.Component:
     return rx.flex(
         rx.vstack(
-            terminal_text("Hola, soy ", "Brais Moure"),
+            terminal_text("Hola mundo, soy ", "Brais Moure"),
             rx.text("Me dedico al desarrollo de software desde 2010."),
             rx.text("En 2018 comencé a divulgar contenido sobre programación en redes sociales como @mouredev, descubriendo el mayor superpoder del sector: una comunidad que ni descansa ni cesa en su labor de compartir conocimiento y ayudar día a día. Los verdaderos protagonistas de este \"Hola Mundo\" day."),
             rx.hstack(
