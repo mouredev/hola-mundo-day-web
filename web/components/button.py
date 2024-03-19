@@ -6,13 +6,16 @@ LOCAL_ICONS = ["x", "discord"]
 
 
 def button(url: str, text="", icon="chevron-right", secondary=False) -> rx.Component:
-    return rx.button(
-        _button_icon(icon),
-        text,
-        on_click=lambda: rx.redirect(url),
-        size=Size.DEFAULT.value,
-        color=Color.BACKGROUND.value,
-        background=Color.SECONDARY.value if secondary else Color.ACCENT.value
+    return rx.link(
+        rx.button(
+            _button_icon(icon),
+            text,
+            size=Size.DEFAULT.value,
+            color=Color.BACKGROUND.value,
+            background=Color.SECONDARY.value if secondary else Color.ACCENT.value
+        ),
+        href=url,
+        is_external=True
     )
 
 # Por algo que desconozco (quizás un error), aunque el icon sea local, se intenta inicializar rx.icon. De ahí este fix.
