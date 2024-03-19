@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "tbuild.sh",
+            "src": "build.sh",
             "use": "@vercel/static-build",
             "config": {
                 "distDir": "public"
