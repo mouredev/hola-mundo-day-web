@@ -23,7 +23,7 @@ def speakers() -> rx.Component:
             "Ya puedes enviar tu propuesta de charla o taller desde los siguientes formularios:",
             True, True, Color.ACCENT
         ),
-        rx.hstack(
+        rx.flex(
             button(
                 constants.TALK_FORM_URL,
                 "Charla",
@@ -34,7 +34,13 @@ def speakers() -> rx.Component:
                 "Taller",
                 "file-code-2"
             ),
-            spacing=Size.DEFAULT.value
+            button(
+                "https://www.youtube.com/playlist?list=PLNdFk2_brsRdi01BE_sWyQ8e9FBmdrxGz",
+                "Ver edición 2023",
+                "youtube"
+            ),
+            spacing=Size.DEFAULT.value,
+            flex_direction=["column", "row"]
         ),
         event_text("Charla: ", "Una ponencia relacionada con el mundo de la programación o el desarrollo de sofware que esté dirigida a todos los niveles. Que sirva para enseñar o motivar."),
         event_text("Taller: ", "Un espacio dedicado a aprender sobre programación y desarrollo de software. Debe ser generalista y comprensible por personas que estén empezando."),
