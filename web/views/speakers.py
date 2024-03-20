@@ -37,7 +37,8 @@ def speakers() -> rx.Component:
             button(
                 "https://www.youtube.com/playlist?list=PLNdFk2_brsRdi01BE_sWyQ8e9FBmdrxGz",
                 "Ver edición 2023",
-                "youtube"
+                "youtube",
+                True
             ),
             spacing=Size.DEFAULT.value,
             flex_direction=["column", "row"]
