@@ -1,9 +1,7 @@
-from os import link
 import reflex as rx
-from web import constants
 import web.styles.styles as styles
+from web import constants
 from web.components.text import text
-from web.styles.colors import Color
 from web.styles.styles import Size, SizeEM
 
 

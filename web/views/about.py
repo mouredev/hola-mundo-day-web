@@ -1,10 +1,8 @@
 import reflex as rx
+import web.styles.styles as styles
 from web import constants
 from web.components.button import button
-import web.styles.styles as styles
-from web.styles.colors import Color
 from web.components.terminal_text import terminal_text
-from web.components.text import text
 from web.styles.styles import Size
 
 
