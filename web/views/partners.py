@@ -33,7 +33,8 @@ def partners() -> rx.Component:
             constants.COFFEE_URL,
             "Colabora con un café",
             "coffee",
-            True
+            True,
+            id="speakers"
         ),
         spacing=Size.DEFAULT.value,
         style=styles.container

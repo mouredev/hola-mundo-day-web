@@ -1,4 +1,5 @@
 import reflex as rx
+from web import constants
 from web.components.button import button
 from web.components.event_text import event_text
 from web.components.print_text import print_text
@@ -23,14 +24,21 @@ def speakers() -> rx.Component:
             True, True, Color.ACCENT
         ),
         rx.hstack(
-            button("", "Charla", "file-input"),
-            button("", "Taller", "file-code-2"),
+            button(
+                constants.TALK_FORM_URL,
+                "Charla",
+                "file-input"
+            ),
+            button(
+                constants.WORKSHOP_FORM_URL,
+                "Taller",
+                "file-code-2"
+            ),
             spacing=Size.DEFAULT.value
         ),
         event_text("Charla: ", "Una ponencia relacionada con el mundo de la programación o el desarrollo de sofware que esté dirigida a todos los niveles. Que sirva para enseñar o motivar."),
         event_text("Taller: ", "Un espacio dedicado a aprender sobre programación y desarrollo de software. Debe ser generalista y comprensible por personas que estén empezando."),
         print_text("Su duración debe ser de entre 15/20 minutos, con una ronda de preguntas de 5 minutos. La comunidad será la encargara de votar las propuestas seleccionadas (5 charlas y 3 talleres). Cada charla y taller será remunerado."),
-        id="speakers",
         spacing=Size.DEFAULT.value,
         style=styles.container
     )

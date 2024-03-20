@@ -5,14 +5,15 @@ from web.styles.styles import Size
 LOCAL_ICONS = ["x", "discord"]
 
 
-def button(url: str, text="", icon="chevron-right", secondary=False, is_external=True) -> rx.Component:
+def button(url: str, text="", icon="chevron-right", secondary=False, is_external=True, id=None) -> rx.Component:
     return rx.link(
         rx.button(
             _button_icon(icon),
             text,
             size=Size.DEFAULT.value,
             color=Color.BACKGROUND.value,
-            background=Color.SECONDARY.value if secondary else Color.ACCENT.value
+            background=Color.SECONDARY.value if secondary else Color.ACCENT.value,
+            id=id
         ),
         href=url,
         is_external=is_external

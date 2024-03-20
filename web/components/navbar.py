@@ -8,10 +8,14 @@ from web.styles.styles import Size, SizeEM
 def navbar() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.icon(
-                "terminal",
-                size=32,
-                color=Color.ACCENT.value
+            rx.link(
+                rx.icon(
+                    "terminal",
+                    size=32,
+                    color=Color.ACCENT.value
+                ),
+                href="/",
+                is_external=False
             ),
             rx.spacer(),
             button(
