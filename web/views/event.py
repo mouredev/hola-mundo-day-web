@@ -18,7 +18,7 @@ def event() -> rx.Component:
             event_text("Charlas"),
             event_text("Talleres"),
             event_text("Networking"),
-            event_text("Mesa redonda"),
+            event_text("Hackathon"),
             event_text("Sorteos"),
             event_text("Sorpresas"),
             spacing=Size.SMALL.value,

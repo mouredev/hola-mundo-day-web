@@ -45,7 +45,7 @@ def speakers() -> rx.Component:
         ),
         event_text("Charla: ", "Una ponencia relacionada con el mundo de la programación o el desarrollo de sofware que esté dirigida a todos los niveles. Que sirva para enseñar o motivar."),
         event_text("Taller: ", "Un espacio dedicado a aprender sobre programación y desarrollo de software. Debe ser generalista y comprensible por personas que estén empezando."),
-        print_text("Su duración debe ser de entre 15/20 minutos, con una ronda de preguntas de 5 minutos. La comunidad será la encargara de votar las propuestas seleccionadas (5 charlas y 3 talleres). Cada charla y taller será remunerado."),
+        print_text("Su duración debe ser de entre 15/20 minutos, con una ronda de preguntas de 5 minutos. La comunidad será la encargara de votar las propuestas seleccionadas (5 charlas y 3 talleres). Cada charla y taller será remunerado con 100$."),
         spacing=Size.DEFAULT.value,
         style=styles.container
     )

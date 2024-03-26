@@ -1,4 +1,5 @@
 import reflex as rx
+from web.components.button import button
 import web.styles.styles as styles
 from web.components.text import text
 from web.styles.colors import Color
@@ -23,9 +24,15 @@ def info() -> rx.Component:
                 spacing=Size.SMALL.value
             ),
             text(
-                "Del 20 marzo al 4 de abril podrás enviar tu propuesta de charla o taller.",
+                "Ya puedes enviar tu propuesta de charla o taller hasta el 4 de abril.",
                 big=True,
                 color=Color.BACKGROUND
+            ),
+            button(
+                "./#speakers",
+                "Participa",
+                icon="file-input",
+                is_external=False
             ),
             spacing=Size.ZERO.value,
             padding_y=SizeEM.MEDIUM.value,
