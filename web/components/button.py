@@ -15,6 +15,9 @@ def button(url: str, text="", icon="chevron-right", secondary=False, is_external
             background=Color.SECONDARY.value if secondary else Color.ACCENT.value,
             id=id
         ),
+        border_width="2px",
+        border_radius="10px",
+        border_color=Color.BACKGROUND.value,
         href=url,
         is_external=is_external
     )

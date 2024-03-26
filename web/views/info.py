@@ -34,7 +34,7 @@ def info() -> rx.Component:
                 icon="file-input",
                 is_external=False
             ),
-            spacing=Size.ZERO.value,
+            spacing=Size.SMALL.value,
             padding_y=SizeEM.MEDIUM.value,
             style=styles.container
         ),
