@@ -1,4 +1,5 @@
 import reflex as rx
+from web.styles.colors import Color
 import web.styles.styles as styles
 from web import constants
 from web.components.button import button
@@ -12,12 +13,25 @@ def partners() -> rx.Component:
     return rx.vstack(
         terminal_text(quoted_text="Patrocinado", end_text=" por"),
         rx.flex(
-            _partner("/partners/raiola.png", "https://mouredev.com/raiola"),
-            _partner("/partners/nuwe.png", "https://nuwe.io"),
-            _partner("/partners/elgato.png", "https://e.lga.to/MoureDev"),
+            _partner(
+                "/partners/raiola.png",
+                "https://mouredev.com/raiola",
+                "20% en hosting"
+            ),
+            _partner(
+                "/partners/nuwe.png",
+                "https://bit.ly/JobOffersNUWE",
+                "Aplica a vacantes Tech"
+            ),
+            _partner(
+                "/partners/elgato.png",
+                "https://elgato.sjv.io/mouredev",
+                "5% código ZZ-MOUREDEV"
+            ),
             spacing=Size.SMALL.value,
             wrap="wrap"
         ),
+        rx.spacer(),
         rx.text("¿Quieres patrocinar el evento? ¡NO TENGO PALABRAS!"),
         rx.text(
             "Puedes escribirme a ",
@@ -47,13 +61,21 @@ def partners() -> rx.Component:
     )
 
 
-def _partner(image: str, url: str) -> rx.Component:
+def _partner(image: str, url: str, text: str) -> rx.Component:
     return rx.link(
-        rx.image(
-            src=image,
-            height="80px",
-            width="auto",
-            padding_right=SizeEM.MEDIUM.value
+        rx.vstack(
+            rx.image(
+                src=image,
+                height="80px",
+                width="auto",
+                padding_right=SizeEM.MEDIUM.value
+            ),
+            rx.text(
+                text,
+                size=Size.SMALL.value,
+                color=Color.PRIMARY.value
+            ),
+            spacing=Size.ZERO.value
         ),
         href=url,
         is_external=True
