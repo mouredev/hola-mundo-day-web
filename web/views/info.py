@@ -24,16 +24,16 @@ def info() -> rx.Component:
                 spacing=Size.SMALL.value
             ),
             text(
-                "Ya puedes enviar tu propuesta de charla o taller hasta el 4 de abril.",
+                "El lunes 8 de abril podrás comenzar a votar tus charlas o talleres favoritos.",
                 big=True,
                 color=Color.BACKGROUND
             ),
-            button(
-                "./#speakers",
-                "Participa",
-                icon="file-input",
-                is_external=False
-            ),
+            # button(
+            #     "./#speakers",
+            #     "Participa",
+            #     icon="file-input",
+            #     is_external=False
+            # ),
             spacing=Size.SMALL.value,
             padding_y=SizeEM.MEDIUM.value,
             style=styles.container

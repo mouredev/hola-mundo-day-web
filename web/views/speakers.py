@@ -14,26 +14,26 @@ def speakers() -> rx.Component:
     return rx.vstack(
         terminal_text(quoted_text="Charlas y talleres"),
         text(
-            "NO se admiten propuestas de personas con experiencia como ponentes.",
+            "NO se han admitido propuestas de personas con experiencia como ponentes.",
             True, True, Color.ACCENT
         ),
         rx.text("En el \"Hola Mundo\" day la comunidad es la protagonista. No hace falta que tengas años de experiencia en el sector o te dediques profesionalmente a dar ponencias. Aquí no hay limitaciones. No importa si has comenzado a estudiar o llevas programando desde hace décadas."),
         rx.text("Por suerte, este tipo de eventos están llenos de referentes conocidos por un gran número de personas, pero en este caso no será así. Cualquier persona puede compartir conocimientos de gran valor."),
         text(
-            "Ya puedes enviar tu propuesta de charla o taller desde los siguientes formularios:",
+            "El lunes 8 de abril podrás comenzar a votar tus charlas o talleres favoritos:",
             True, True, Color.ACCENT
         ),
         rx.flex(
-            button(
-                constants.TALK_FORM_URL,
-                "Charla",
-                "file-input"
-            ),
-            button(
-                constants.WORKSHOP_FORM_URL,
-                "Taller",
-                "file-code-2"
-            ),
+            # button(
+            #     constants.TALK_FORM_URL,
+            #     "Charla",
+            #     "file-input"
+            # ),
+            # button(
+            #     constants.WORKSHOP_FORM_URL,
+            #     "Taller",
+            #     "file-code-2"
+            # ),
             button(
                 "https://www.youtube.com/playlist?list=PLNdFk2_brsRdi01BE_sWyQ8e9FBmdrxGz",
                 "Ver edición 2023",
