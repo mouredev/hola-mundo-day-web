@@ -11,6 +11,7 @@ from web.views.info import info
 from web.views.other import other
 from web.views.partners import partners
 from web.views.speakers import speakers
+from web.views.hackathon import hackathon
 
 
 def index() -> rx.Component:
@@ -26,6 +27,8 @@ def index() -> rx.Component:
                 partners(),
                 _divider(),
                 speakers(),
+                _divider(),
+                hackathon(),
                 _divider(),
                 other(),
                 _divider(),

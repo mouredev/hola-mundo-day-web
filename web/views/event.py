@@ -34,7 +34,7 @@ def event() -> rx.Component:
             ),
             button(
                 constants.NEWSLETTER_URL,
-                "Suscríbete a la newsletter",
+                "Newsletter",
                 "mail",
                 True
             ),

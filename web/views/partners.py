@@ -1,29 +1,28 @@
 import reflex as rx
-from web.styles.colors import Color
 import web.styles.styles as styles
 from web import constants
 from web.components.button import button
 from web.components.print_text import print_text
-from web.components.span import span
 from web.components.terminal_text import terminal_text
-from web.styles.styles import Size, SizeEM
+from web.components.partner import partner
+from web.styles.styles import Size
 
 
 def partners() -> rx.Component:
     return rx.vstack(
         terminal_text(quoted_text="Patrocinado", end_text=" por"),
         rx.flex(
-            _partner(
+            partner(
                 "/partners/raiola.png",
                 "https://mouredev.com/raiola",
                 "20% en hosting"
             ),
-            _partner(
+            partner(
                 "/partners/nuwe.png",
                 "https://bit.ly/JobOffersNUWE",
                 "Aplica a vacantes Tech"
             ),
-            _partner(
+            partner(
                 "/partners/elgato.png",
                 "https://elgato.sjv.io/mouredev",
                 "5% código ZZ-MOUREDEV"
@@ -58,25 +57,4 @@ def partners() -> rx.Component:
         ),
         spacing=Size.DEFAULT.value,
         style=styles.container
-    )
-
-
-def _partner(image: str, url: str, text: str) -> rx.Component:
-    return rx.link(
-        rx.vstack(
-            rx.image(
-                src=image,
-                height="80px",
-                width="auto",
-                padding_right=SizeEM.MEDIUM.value
-            ),
-            rx.text(
-                text,
-                size=Size.SMALL.value,
-                color=Color.PRIMARY.value
-            ),
-            spacing=Size.ZERO.value
-        ),
-        href=url,
-        is_external=True
     )

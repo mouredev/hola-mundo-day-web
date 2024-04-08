@@ -7,7 +7,7 @@ from web.styles.styles import Size
 
 def other() -> rx.Component:
     return rx.vstack(
-        terminal_text(quoted_text="Hackathon, Networking, Sorteos, Agenda..."),
+        terminal_text(quoted_text="Networking, Sorteos, Agenda..."),
         print_text("Próximamente..."),
         spacing=Size.DEFAULT.value,
         style=styles.container
