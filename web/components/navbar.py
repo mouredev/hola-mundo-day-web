@@ -18,12 +18,12 @@ def navbar() -> rx.Component:
                 is_external=False
             ),
             rx.spacer(),
-            button(
-                "./#speakers",
-                "Vota",
-                icon="file-input",
-                is_external=False
-            ),
+            # button(
+            #     "./#speakers",
+            #     "Vota",
+            #     icon="file-input",
+            #     is_external=False
+            # ),
             button(constants.TWITCH_URL, icon="twitch"),
             spacing=Size.DEFAULT.value,
             padding=SizeEM.DEFAULT.value,
