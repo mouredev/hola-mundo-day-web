@@ -12,16 +12,68 @@ from web.styles.styles import Size
 
 def speakers() -> rx.Component:
     return rx.vstack(
-        terminal_text(quoted_text="Charlas y talleres"),
-        text(
-            "NO se han admitido propuestas de personas con experiencia como ponentes.",
-            True, True, Color.ACCENT
+        terminal_text(quoted_text="Charlas"),
+        _speaker(
+            "¿Qué hace que un GitHub sea \"bueno\"?",
+            "Github es la red social de los programadores y nuestro portfolio de trabajo. Es la ventana a nuestra experiencia técnica y las empresas le dan mucha importancia. Por esta razón, si somos desarrolladores de software, deberíamos preguntarnos... ¿Sé cómo presentarme en Github? En esta charla aprenderás tips y sugerencias para que tu profile de Github sea llamativo, además te contaré lo que me ha ayudado a mi a mejorar mi perfil.",
+            "Pablo Marino",
+            "https://www.linkedin.com/in/pablomarinotech"
         ),
-        rx.text("En el \"Hola Mundo\" day la comunidad es la protagonista. No hace falta que tengas años de experiencia en el sector o te dediques profesionalmente a dar ponencias. Aquí no hay limitaciones. No importa si has comenzado a estudiar o llevas programando desde hace décadas."),
-        rx.text("Por suerte, este tipo de eventos están llenos de referentes conocidos por un gran número de personas, pero en este caso no será así. Cualquier persona puede compartir conocimientos de gran valor."),
-        text(
-            "El día 17 de abril podrás consultar las charlas y talleres seleccionados.",
-            True, True, Color.ACCENT
+        _speaker(
+            "Ser autodidacta en el mundo del software",
+            "Hablaré sobre cómo aprender a ser autodidacta y contaré mi experiencia de cómo me cambió la vida. Cómo en el mundo del desarrollo necesitas estar siempre al día y cómo un desarrollador nunca para de aprender. Además, explicaré como bonus las ventajas de usar Jetpack Compose y SwiftUI.",
+            "Kevin Morales",
+            "https://www.kevinhomorales.com"
+        ),
+        _speaker(
+            "Soft skills que todo programador debería tener",
+            "En ocasiones, priorizamos el conocimiento técnico sobre el desarrollo de habilidades blandas. En esta charla exploraré la importancia de equilibrar ambos aspectos para el crecimiento profesional.",
+            "Geraldhy Messu",
+            "ttps://github.com/gerald-M14"
+        ),
+        _speaker(
+            "Cómo entrar el mundo de freelance internacional: motivaciones, estrategias y retos",
+            "El freelancing es una oportunidad genial para ganar dinero desde cualquier lugar del mundo, usando tus habilidades y destrezas. Tiene sentido considerar esta opción y entender sus ventajas y desventajas, sin importar el nivel. Como Upwork Top Rated Plus, quisiera compartir mis experiencias, métodos y estrategias.",
+            "Dmitry Zhukov",
+            "https://zdcreatech.com"
+        ),
+        _speaker(
+            "¡No dejes para mañana tu código de hoy! Cómo vencer la procrastinación en programación",
+            "Como alguien que ha superado la procrastinación en programación, estoy aquí para compartir cómo logré vencer este obstáculo. Aprendí a establecer metas claras, dividir proyectos en tareas manejables y eliminar distracciones. Con determinación y autodisciplina, logré mejorar mi productividad y calidad de trabajo. Ahora quiero ayudarte a hacer lo mismo. Juntos, podemos superar la procrastinación y alcanzar nuestro máximo potencial como desarrolladores.",
+            "José Ángel Polanco",
+            ""
+        ),
+        _speaker(
+            "Desbloquea tu creatividad: Prompt engineering con Gemini AI y ChatGPT",
+            "¡Despierta tu lado creativo! Aprende a usar Prompt Engineering con Gemini AI y ChatGPT para generar textos increíbles y soluciones creativas para tus proyectos, desde recomendaciones en Markdown hasta estructuras de tú código optimizadas.",
+            "Juliana Castillo",
+            "https://github.com/julianacastilloaraujo"
+        ),
+        _speaker(
+            "UX Design",
+            "Explora las claves del diseño de experiencia de usuario para crear productos que no solo satisfagan, sino que deleiten. Descubre cómo la empatía y la innovación se unen para transformar la interacción usuario-producto.",
+            "Ángela",
+            "https://twitter.com/ngelamf"
+        ),
+
+        terminal_text(quoted_text="Talleres"),
+        _speaker(
+            "Open Source: Configura tu editor, consola y entorno para contribuir a proyectos de código abierto",
+            "Taller práctico donde te explicarán paso a paso cómo configurar tu entorno de desarrollo para contribuir a proyectos de código abierto, repasando comandos útiles, configuración de SSH, personalización del editor (Visual Studio Code), etc. Como ejemplo práctico, configuraremos un repo desde cero para contribuir al roadmap de la comunidad.",
+            "Jamer José",
+            "https://jamerrq.deno.dev"
+        ),
+        _speaker(
+            "Crea tu propio bot de Telegram con Python",
+            "Descubre cómo crear un bot de Telegram utilizando la biblioteca Telebot de Python. Explorarás la interacción con la API de Telegram y aprenderás a configurar respuestas automáticas a los mensajes.",
+            "Karoll Escalante",
+            "https://www.linkedin.com/in/karollescalanteg"
+        ),
+        _speaker(
+            "Desmitificando el Testing: Aprende a probar como un profesional",
+            "¿Te apasiona el mundo del software y quieres aprender a probar como un profesional? En este taller práctico te guiaré a través de los fundamentos del testing de software, desde los conceptos básicos hasta las técnicas más avanzadas.",
+            "María Morán",
+            "https://mariamoran.es"
         ),
         rx.flex(
             # button(
@@ -38,9 +90,31 @@ def speakers() -> rx.Component:
             spacing=Size.DEFAULT.value,
             flex_direction=["column", "row"]
         ),
+        text(
+            "NO se han admitido propuestas de personas con experiencia como ponentes.",
+            True, True, Color.ACCENT
+        ),
+        rx.text("En el \"Hola Mundo\" day la comunidad es la protagonista. No hace falta que tengas años de experiencia en el sector o te dediques profesionalmente a dar ponencias. Aquí no hay limitaciones. No importa si has comenzado a estudiar o llevas programando desde hace décadas."),
+        rx.text("Por suerte, este tipo de eventos están llenos de referentes conocidos por un gran número de personas, pero en este caso no será así. Cualquier persona puede compartir conocimientos de gran valor."),
         event_text("Charla: ", "Una ponencia relacionada con el mundo de la programación o el desarrollo de sofware que esté dirigida a todos los niveles. Que sirva para enseñar o motivar."),
         event_text("Taller: ", "Un espacio dedicado a aprender sobre programación y desarrollo de software. Debe ser generalista y comprensible por personas que estén empezando."),
-        print_text("Su duración debe ser de entre 15/20 minutos, con una ronda de preguntas de 5 minutos. La comunidad será la encargara de votar las propuestas seleccionadas (5 charlas y 3 talleres). Cada charla y taller será remunerado con 100$."),
+        print_text("Su duración debe ser de entre 15/20 minutos, con una ronda de preguntas de 5 minutos. La comunidad será la encargara de votar las propuestas seleccionadas (7 charlas y 3 talleres). Cada charla y taller será remunerado con 100$."),
         spacing=Size.DEFAULT.value,
         style=styles.container
+    )
+
+
+def _speaker(title: str, body: str, author: str, url: str) -> rx.Component:
+    return rx.vstack(
+        event_text(
+            title,
+            big=True
+        ),
+        rx.text(body),
+        rx.link(
+            f"- {author}",
+            href=url,
+            is_external=True
+        ),
+        rx.divider()
     )
