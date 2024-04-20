@@ -31,7 +31,7 @@ def speakers() -> rx.Component:
             "Soft skills que todo programador debería tener",
             "En ocasiones, priorizamos el conocimiento técnico sobre el desarrollo de habilidades blandas. En esta charla exploraré la importancia de equilibrar ambos aspectos para el crecimiento profesional.",
             "Geraldhy Messu",
-            "ttps://github.com/gerald-M14",
+            "https://github.com/gerald-M14",
             "/speakers/geraldhy_messu.jpg"
         ),
         _speaker(
