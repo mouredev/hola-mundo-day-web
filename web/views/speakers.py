@@ -38,7 +38,8 @@ def speakers() -> rx.Component:
             "Cómo entrar el mundo de freelance internacional: motivaciones, estrategias y retos",
             "El freelancing es una oportunidad genial para ganar dinero desde cualquier lugar del mundo, usando tus habilidades y destrezas. Tiene sentido considerar esta opción y entender sus ventajas y desventajas, sin importar el nivel. Como Upwork Top Rated Plus, quisiera compartir mis experiencias, métodos y estrategias.",
             "Dmitry Zhukov",
-            "https://zdcreatech.com"
+            "https://www.linkedin.com/in/dmitryjima",
+            "/speakers/dmitry_zhukov.jpg"
         ),
         _speaker(
             "¡No dejes para mañana tu código de hoy! Cómo vencer la procrastinación en programación",
@@ -51,7 +52,8 @@ def speakers() -> rx.Component:
             "Desbloquea tu creatividad: Prompt engineering con Gemini AI y ChatGPT",
             "¡Despierta tu lado creativo! Aprende a usar Prompt Engineering con Gemini AI y ChatGPT para generar textos increíbles y soluciones creativas para tus proyectos, desde recomendaciones en Markdown hasta estructuras de tú código optimizadas.",
             "Juliana Castillo",
-            "https://www.linkedin.com/in/julianacastilloaraujo"
+            "https://www.linkedin.com/in/julianacastilloaraujo",
+            "/speakers/juliana_castillo.jpg"
         ),
         _speaker(
             "UX Design",
@@ -112,16 +114,13 @@ def speakers() -> rx.Component:
     )
 
 
-def _speaker(title: str, body: str, author: str, url: str, avatar="") -> rx.Component:
+def _speaker(title: str, body: str, author: str, url: str, avatar: str) -> rx.Component:
     return rx.flex(
-        rx.cond(
-            avatar != "",
-            rx.image(
-                src=avatar,
-                width="180px",
-                height="180px",
-                border_radius="10px"
-            )
+        rx.image(
+            src=avatar,
+            width="180px",
+            height="180px",
+            border_radius="10px"
         ),
         rx.vstack(
             event_text(
