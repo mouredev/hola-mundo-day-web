@@ -24,13 +24,13 @@ def info() -> rx.Component:
                 spacing=Size.SMALL.value
             ),
             text(
-                "Ya puedes consultar las charlas y talleres seleccionados.",
+                "Participa en la hackathon y gana 1000$ en premios (hasta el 2 de mayo).",
                 big=True,
                 color=Color.BACKGROUND
             ),
             button(
-                "./#speakers",
-                "Speakers",
+                "./#hackathon",
+                "Hackathon",
                 icon="file-input",
                 is_external=False
             ),

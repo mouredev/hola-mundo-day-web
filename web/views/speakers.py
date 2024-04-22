@@ -104,7 +104,8 @@ def speakers() -> rx.Component:
                 "https://www.youtube.com/playlist?list=PLNdFk2_brsRdi01BE_sWyQ8e9FBmdrxGz",
                 "Ver edición 2023",
                 "youtube",
-                True
+                True,
+                id="hackathon"
             ),
             spacing=Size.DEFAULT.value,
             flex_direction=["column", "row"]

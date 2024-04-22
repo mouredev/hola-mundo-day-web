@@ -19,8 +19,8 @@ def navbar() -> rx.Component:
             ),
             rx.spacer(),
             button(
-                "./#speakers",
-                "Speakers",
+                "./#hackathon",
+                "Hackathon",
                 icon="file-input",
                 is_external=False
             ),
