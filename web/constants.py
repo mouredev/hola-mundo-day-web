@@ -14,4 +14,6 @@ HACKATHON_FORM_URL = "https://forms.gle/3ttTXMD8CGNv5rwA7"
 
 REFLEX_TUTORIAL_URL = "https://github.com/mouredev/python-web"
 
+TICKETS_URL = "https://www.eventbrite.es/e/hola-mundo-day-2024-tickets-893625697517"
+
 GOOGLE_ANALYTICS_TAG = "G-XS3D45RKRS"

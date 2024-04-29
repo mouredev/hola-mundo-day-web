@@ -12,3 +12,21 @@
 @-webkit-keyframes blink-animation {
     to { visibility: hidden; }
 }
+
+/* Ticket */
+
+.ticket {
+    transform:
+        rotate3d(.5,-.866,0,15deg)
+        rotate(1deg);
+    box-shadow:0 0 8px #39ff14;
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+    border-radius: 1em;  
+    &:hover {
+        transform:
+            rotate3d(0,0,0,0deg)
+            rotate(0deg);
+    }
+}  

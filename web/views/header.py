@@ -4,6 +4,7 @@ from web import constants
 from web.components.button import button
 from web.components.span import span
 from web.components.terminal_text import terminal_text
+from web.components.ticket import ticket
 from web.styles.colors import Color
 from web.styles.styles import Size, SizeEM
 
@@ -49,6 +50,7 @@ def header() -> rx.Component:
                 as_="h2"
             ),
             rx.heading("Día 128 | 7 de mayo | 16:00 CET", as_="h3"),
+            ticket(),
             rx.flex(
                 button(
                     constants.TWITCH_URL,
