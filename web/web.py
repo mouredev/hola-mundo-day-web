@@ -1,17 +1,19 @@
 import reflex as rx
 import web.constants as constants
 from web.components.navbar import navbar
-from web.styles.colors import Color
+from web.components.divider import divider
 from web.styles.styles import BASE_STYLE, STYLESHEETS, Size, SizeEM
 from web.views.about import about
 from web.views.event import event
 from web.views.footer import footer
 from web.views.header import header
 from web.views.info import info
-from web.views.other import other
+from web.views.networking import networking
 from web.views.partners import partners
+from web.views.raffle import raffle
 from web.views.speakers import speakers
 from web.views.hackathon import hackathon
+from web.views.schedule import schedule
 
 
 def index() -> rx.Component:
@@ -23,15 +25,19 @@ def index() -> rx.Component:
                 header(),
                 info(),
                 event(),
-                _divider(),
+                divider(),
                 partners(),
-                _divider(),
+                divider(),
                 speakers(),
-                _divider(),
+                divider(),
                 hackathon(),
-                _divider(),
-                other(),
-                _divider(),
+                divider(),
+                networking(),
+                divider(),
+                schedule(),
+                divider(),
+                raffle(),
+                divider(),
                 about(),
                 spacing=Size.VERY_BIG.value,
                 align="center",
@@ -40,13 +46,9 @@ def index() -> rx.Component:
             padding_top=SizeEM.DEFAULT.value,
             padding_bottom=SizeEM.VERY_BIG.value
         ),
-        _divider(),
+        divider(),
         footer(),
     )
-
-
-def _divider() -> rx.Component:
-    return rx.divider(background=Color.SECONDARY.value)
 
 
 app = rx.App(
