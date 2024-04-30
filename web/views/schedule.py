@@ -53,6 +53,19 @@ def schedule() -> rx.Component:
         print_text(
             "El horario puede sufrir modificaciones. Zona horaria: CET (España)"
         ),
+        rx.vstack(
+            rx.text.strong("Hora de inicio por país:"),
+            rx.text("16:00 | España"),
+            rx.text(
+                "08:00 | México, Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua"
+            ),
+            rx.text("09:00 | Colombia, Ecuador, Panamá, Perú, Perú"),
+            rx.text(
+                "10:00 | Chile, Bolivia, Cuba, Puerto Rico, República Dominicana, Venezuela, Paraguay"
+            ),
+            rx.text("11:00 | Argentina, Uruguay"),
+            spacing=Size.ZERO.value
+        ),
         spacing=Size.DEFAULT.value,
         style=styles.container
     )
