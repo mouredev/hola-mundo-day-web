@@ -24,13 +24,13 @@ def info() -> rx.Component:
                 spacing=Size.SMALL.value
             ),
             text(
-                "Participa en la hackathon y gana 1000$ en premios (hasta el 2 de mayo).",
+                "Vota a tus proyectos favoritos de la hackathon (hasta el 5 de mayo).",
                 big=True,
                 color=Color.BACKGROUND
             ),
             button(
                 "./#hackathon",
-                "Hackathon",
+                "Votar",
                 icon="file-input",
                 is_external=False
             ),

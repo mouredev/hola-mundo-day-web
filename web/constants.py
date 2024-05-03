@@ -11,7 +11,7 @@ NETWORKING_URL = "https://discord.gg/mouredev?event=1234755155929468980"
 TALK_FORM_URL = "https://forms.gle/GhTbteDFG2rGkCYW7"
 WORKSHOP_FORM_URL = "https://forms.gle/kJRjW1kE7CusaNaR6"
 VOTE_FORM_URL = "https://forms.gle/sogXPXzgAWEVB5y98"
-HACKATHON_FORM_URL = "https://forms.gle/3ttTXMD8CGNv5rwA7"
+HACKATHON_FORM_URL = "https://forms.gle/avQP85mtiwVZk2to7"
 
 REFLEX_TUTORIAL_URL = "https://github.com/mouredev/python-web"
 

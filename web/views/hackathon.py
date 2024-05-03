@@ -15,7 +15,7 @@ def hackathon() -> rx.Component:
     return rx.vstack(
         terminal_text(quoted_text="Hackathon"),
         text(
-            "Participa en la hackathon y gana 1000$ en premios (hasta el 2 de mayo).",
+            "Vota a tus proyectos favoritos de la hackathon (hasta el 5 de mayo).",
             True, True, Color.ACCENT
         ),
         print_text("Premios: 1º - 600$ | 2º - 300$ | 3º - 100$"),
@@ -29,17 +29,17 @@ def hackathon() -> rx.Component:
             "Intrucciones:",
             True, True, Color.ACCENT
         ),
-        event_text("Proyecto: ", "Desarrolla un proyecto web utilizando Reflex que cumpla un único objetivo: \"Ayudar a la comunidad de desarrollo de software\" (de la manera que se te ocurra)."),
-        event_text("Requisitos: ", "El proyecto deberá tener publicado su código en GitHub y estar desplegado en una url pública, utilizando el servicio de hosting que quieras (Recuerda que Reflex posee su propio hosting con un sólo comando)."),
-        event_text("Fechas: ", "Desarrollo y envío: Hasta el 2 de mayo | Votaciones por parte de la comunidad: Del 3 al 5 de mayo | Final: 7 de mayo durante el evento."),
-        event_text("Final: ", "Entre los 3 proyectos más votados se realizará una votación el día del evento. Los finalistas podrán hablar en directo sobre su proyecto antes de la votación definitiva."),
-        event_text("Participación: ", "Para participar deberás rellenar el siguiente formulario con todos los datos del proyecto a presentar. Podrás hacerlo hasta el 2 de mayo (incluido)."),
+        event_text("Proyecto: ", "El objetivo de la hackathon era desarrollar un proyecto web utilizando Reflex que sirva para \"ayudar a la comunidad de desarrollo de software\"."),
+        event_text(
+            "Votación: ", "Hasta el 5 de mayo utilizando el siguiente formulario. El día 6 se presentarán los finalistas."
+        ),
         button(
             constants.HACKATHON_FORM_URL,
-            "Participar",
+            "Votar",
             "file-input"
         ),
-        rx.text("¿Quieres aprender Reflex para participar? Tengo un curso gratis."),
+        event_text("Final: ", "Entre los 3 proyectos más votados se realizará una votación el día del evento. Los finalistas podrán hablar en directo sobre su proyecto antes de la votación definitiva."),
+        rx.text("¿Quieres aprender Reflex? Tengo un curso gratis."),
         button(
             constants.REFLEX_TUTORIAL_URL,
             "Curso",
