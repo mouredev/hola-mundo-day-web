@@ -15,7 +15,7 @@ def hackathon() -> rx.Component:
     return rx.vstack(
         terminal_text(quoted_text="Hackathon"),
         text(
-            "Vota a tus proyectos favoritos de la hackathon (hasta el 5 de mayo).",
+            "Decide los 3 proyectos ganadores durante el evento en directo.",
             True, True, Color.ACCENT
         ),
         print_text("Premios: 1º - 600$ | 2º - 300$ | 3º - 100$"),
@@ -30,21 +30,22 @@ def hackathon() -> rx.Component:
             True, True, Color.ACCENT
         ),
         event_text("Proyecto: ", "El objetivo de la hackathon era desarrollar un proyecto web utilizando Reflex que sirva para \"ayudar a la comunidad de desarrollo de software\"."),
-        event_text(
-            "Votación: ", "Hasta el 5 de mayo utilizando el siguiente formulario. El día 6 se presentarán los finalistas."
-        ),
-        button(
-            constants.HACKATHON_FORM_URL,
-            "Votar",
-            "file-input"
-        ),
+        # event_text(
+        #     "Votación: ", "Hasta el 5 de mayo utilizando el siguiente formulario. El día 6 se presentarán los finalistas."
+        # ),
+        # button(
+        #     constants.HACKATHON_FORM_URL,
+        #     "Votar",
+        #     "file-input"
+        # ),
         event_text("Final: ", "Entre los 3 proyectos más votados se realizará una votación el día del evento. Los finalistas podrán hablar en directo sobre su proyecto antes de la votación definitiva."),
         rx.text("¿Quieres aprender Reflex? Tengo un curso gratis."),
         button(
             constants.REFLEX_TUTORIAL_URL,
             "Curso",
             "file-input",
-            True
+            True,
+            id="networking"
         ),
         spacing=Size.DEFAULT.value,
         style=styles.container
