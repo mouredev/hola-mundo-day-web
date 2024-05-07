@@ -19,10 +19,10 @@ def navbar() -> rx.Component:
             ),
             rx.spacer(),
             button(
-                "./#networking",
-                "Networking",
-                icon="file-input",
-                is_external=False
+                constants.TWITCH_URL,
+                "En directo",
+                icon="radio",
+                is_external=True
             ),
             button(constants.TWITCH_URL, icon="twitch"),
             spacing=Size.DEFAULT.value,

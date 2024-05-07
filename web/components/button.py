@@ -28,6 +28,10 @@ def button(url: str, text="", icon="chevron-right", secondary=False, is_external
 def _button_icon(icon: str) -> rx.Component:
     return rx.cond(
         icon in LOCAL_ICONS,
-        rx.image(src=f"/{icon}.svg", width="24px", height="auto"),
+        rx.image(
+            src=f"/{icon}.svg",
+            width="24px",
+            height="auto"
+        ),
         rx.icon("chevron-right" if icon in LOCAL_ICONS else icon)
     )

@@ -1,6 +1,7 @@
 import reflex as rx
-from web.components.button import button
 import web.styles.styles as styles
+from web import constants
+from web.components.button import button
 from web.components.text import text
 from web.styles.colors import Color
 from web.styles.styles import Size, SizeEM
@@ -24,15 +25,15 @@ def info() -> rx.Component:
                 spacing=Size.SMALL.value
             ),
             text(
-                "Accede al networking con la comunidad previo al evento.",
+                "¡El Hola Mundo day ha comenzado!",
                 big=True,
                 color=Color.BACKGROUND
             ),
             button(
-                "./#networking",
-                "Networking",
-                icon="file-input",
-                is_external=False
+                constants.TWITCH_URL,
+                "En directo",
+                icon="radio",
+                is_external=True
             ),
             spacing=Size.SMALL.value,
             padding_y=SizeEM.MEDIUM.value,

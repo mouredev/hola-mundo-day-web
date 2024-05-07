@@ -50,18 +50,18 @@ def header() -> rx.Component:
                 as_="h2"
             ),
             rx.heading("Día 128 | 7 de mayo | 16:00 CET", as_="h3"),
-            ticket(),
+            # ticket(),
             rx.flex(
                 button(
                     constants.TWITCH_URL,
                     "twitch.tv/mouredev",
                     "twitch"
                 ),
-                button(
-                    constants.EVENT_URL,
-                    "Crear recordatorio",
-                    "discord"
-                ),
+                # button(
+                #     constants.EVENT_URL,
+                #     "Crear recordatorio",
+                #     "discord"
+                # ),
                 flex_direction=["column", "row"],
                 spacing=Size.DEFAULT.value
             ),
@@ -70,10 +70,12 @@ def header() -> rx.Component:
                     rx.icon(
                         "radio",
                         size=32,
-                        color="crimson"
+                        color="crimson",
+                        class_name="blink"
                     ),
                     rx.heading(
-                        id="countdown",
+                        "En directo",
+                        # id="countdown",
                         color=Color.PRIMARY.value
                     ),
                     spacing=Size.SMALL.value,
@@ -87,7 +89,7 @@ def header() -> rx.Component:
                 href="https://twitter.com/hashtag/HolaMundoDay",
                 is_external=True
             ),
-            rx.script(src="/js/countdown.js"),
+            # rx.script(src="/js/countdown.js"),
             position="relative",
             align="center",
             spacing=Size.DEFAULT.value,
