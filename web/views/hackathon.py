@@ -36,6 +36,102 @@ def hackathon() -> rx.Component:
         #     "file-input"
         # ),
         event_text("Final: ", "Entre los 3 proyectos más votados se realizará una votación el día del evento. Los finalistas podrán hablar en directo sobre su proyecto antes de la votación definitiva."),
+        text(
+            "Proyectos presentados:",
+            True, True, Color.ACCENT
+        ),
+        rx.vstack(
+            _project(
+                "Fonts Web",
+                "Nicolas Vargas",
+                "https://fontsweb.online",
+                "https://github.com/uprizingFaze/fontsweb"
+            ),
+            _project(
+                "WebWizard",
+                "Carlos Abadía",
+                "https://webwizard.reflex.run",
+                "https://github.com/carlosabadia/webwizard"
+            ),
+            _project(
+                "Codex me",
+                "Giovanny Kelly",
+                "https://codexme.reflex.run",
+                "https://github.com/Gioak1993/CodeXme"
+            ),
+            _project(
+                "Recursos-IT",
+                "Ricardo",
+                "https://recursosit.reflex.run",
+                "https://github.com/Rikmij/RecursosIT-ReflexHacktaton"
+            ),
+            _project(
+                "Comandos de linux",
+                "Sergio Ruiz",
+                "https://comandos-de-linux.reflex.run",
+                "https://github.com/pyramsd/Pagina-de-documentacion-comandos-linux"
+            ),
+            _project(
+                "ReflexLlama",
+                "Johan Manuel Grisales",
+                "http://elsoaverso.com:3000",
+                "https://github.com/johanmanuelle/reflexLlama"
+            ),
+            _project(
+                "AGTool",
+                "Brahian Arias",
+                "https://agtool.reflex.run",
+                "https://github.com/aquelaronte/aquelaronte_git_tool"
+            ),
+            _project(
+                "VSCode Gallery",
+                "Alberto",
+                "https://vscodegallery.reflex.run",
+                "https://github.com/AlbertoAIG/vscode_gallery"
+            ),
+            _project(
+                "DevForum",
+                "Javier Gonzalez",
+                "https://devforum-production.up.railway.app",
+                "https://github.com/JavierGonzalez998/DevForum"
+            ),
+            _project(
+                "MagicMP3web",
+                "Jonathan B.V",
+                "https://magic-mp3-rx.reflex.run",
+                "https://github.com/MagoOscuro91/Magic_MP3_web"
+            ),
+            _project(
+                "Lector de documentos",
+                "Andres Perez",
+                "https://pyrumind.reflex.run",
+                "https://github.com/andreselcientifico/PDF-TRANSLATE-WEB"
+            ),
+            _project(
+                "Docflow",
+                "Miguel Cárdenas",
+                "https://docflow.reflex.run",
+                "https://github.com/miguelcsx/docflow"
+            ),
+            _project(
+                "resources4dev",
+                "Ylenia Díaz",
+                "https://resource4dev.reflex.run",
+                "https://github.com/YleniaDiaz/hackathon-moure-dev"
+            ),
+            _project(
+                "Componentes predefinidos",
+                "Eric",
+                "https://predefined-components-ericcode29.reflex.run",
+                "https://github.com/ericcode29/hackaton_mouredev"
+            ),
+            _project(
+                "My portafolio",
+                "Daniel Santiago Angel",
+                "https://danidev.reflex.run",
+                "https://github.com/DANIElPEZ/My-web"
+            ),
+        ),
         rx.text("¿Quieres aprender Reflex? Tengo un curso gratis."),
         button(
             constants.REFLEX_TUTORIAL_URL,
@@ -46,4 +142,13 @@ def hackathon() -> rx.Component:
         ),
         spacing=Size.DEFAULT.value,
         style=styles.container
+    )
+
+
+def _project(name: str, author: str, url: str, github: str) -> rx.Component:
+    return rx.hstack(
+        button(url, icon="link", secondary=True),
+        button(github, icon="github", secondary=True),
+        event_text(f"{name} ", author),
+        align="center"
     )
