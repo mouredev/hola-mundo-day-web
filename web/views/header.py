@@ -66,10 +66,28 @@ def header() -> rx.Component:
                 spacing=Size.DEFAULT.value
             ),
             rx.link(
+                rx.hstack(
+                    rx.icon(
+                        "radio",
+                        size=32,
+                        color="crimson"
+                    ),
+                    rx.heading(
+                        id="countdown",
+                        color=Color.PRIMARY.value
+                    ),
+                    spacing=Size.SMALL.value,
+                    align="center"
+                ),
+                href=constants.TWITCH_URL,
+                is_external=True
+            ),
+            rx.link(
                 "#HolaMundoDay",
                 href="https://twitter.com/hashtag/HolaMundoDay",
                 is_external=True
             ),
+            rx.script(src="/js/countdown.js"),
             position="relative",
             align="center",
             spacing=Size.DEFAULT.value,

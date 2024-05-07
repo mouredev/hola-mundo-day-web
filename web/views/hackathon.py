@@ -30,9 +30,6 @@ def hackathon() -> rx.Component:
             True, True, Color.ACCENT
         ),
         event_text("Proyecto: ", "El objetivo de la hackathon era desarrollar un proyecto web utilizando Reflex que sirva para \"ayudar a la comunidad de desarrollo de software\"."),
-        # event_text(
-        #     "Votación: ", "Hasta el 5 de mayo utilizando el siguiente formulario. El día 6 se presentarán los finalistas."
-        # ),
         # button(
         #     constants.HACKATHON_FORM_URL,
         #     "Votar",
