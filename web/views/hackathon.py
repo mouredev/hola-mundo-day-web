@@ -14,10 +14,10 @@ from web.styles.styles import Size
 def hackathon() -> rx.Component:
     return rx.vstack(
         terminal_text(quoted_text="Hackathon"),
-        text(
-            "Decide los 3 proyectos ganadores durante el evento en directo.",
-            True, True, Color.ACCENT
-        ),
+        # text(
+        #     "Decide los 3 proyectos ganadores durante el evento en directo.",
+        #     True, True, Color.ACCENT
+        # ),
         print_text("Premios: 1º - 600$ | 2º - 300$ | 3º - 100$"),
         partner(
             "/reflex.svg",
@@ -35,29 +35,32 @@ def hackathon() -> rx.Component:
         #     "Votar",
         #     "file-input"
         # ),
-        event_text("Final: ", "Entre los 3 proyectos más votados se realizará una votación el día del evento. Los finalistas podrán hablar en directo sobre su proyecto antes de la votación definitiva."),
+        # event_text("Final: ", "Entre los 3 proyectos más votados se realizará una votación el día del evento. Los finalistas podrán hablar en directo sobre su proyecto antes de la votación definitiva."),
         text(
             "Proyectos presentados:",
             True, True, Color.ACCENT
         ),
         rx.vstack(
             _project(
-                "Fonts Web",
-                "Nicolas Vargas",
-                "https://fontsweb.online",
-                "https://github.com/uprizingFaze/fontsweb"
-            ),
-            _project(
-                "WebWizard",
+                "WebWizard ",
                 "Carlos Abadía",
                 "https://webwizard.reflex.run",
-                "https://github.com/carlosabadia/webwizard"
+                "https://github.com/carlosabadia/webwizard",
+                True
             ),
             _project(
-                "Codex me",
+                "Codex me ",
                 "Giovanny Kelly",
                 "https://codexme.reflex.run",
-                "https://github.com/Gioak1993/CodeXme"
+                "https://github.com/Gioak1993/CodeXme",
+                True
+            ),
+            _project(
+                "Fonts Web ",
+                "Nicolas Vargas",
+                "https://fontsweb.online",
+                "https://github.com/uprizingFaze/fontsweb",
+                True
             ),
             _project(
                 "Recursos-IT",
@@ -145,10 +148,14 @@ def hackathon() -> rx.Component:
     )
 
 
-def _project(name: str, author: str, url: str, github: str) -> rx.Component:
+def _project(name: str, author: str, url: str, github: str, winner=False) -> rx.Component:
     return rx.hstack(
         button(url, icon="link", secondary=True),
         button(github, icon="github", secondary=True),
         event_text(f"{name} ", author),
+        rx.cond(
+            winner,
+            rx.icon("award")
+        ),
         align="center"
     )

@@ -19,7 +19,7 @@ def networking() -> rx.Component:
         rx.text("Durante las 24 horas anteriores al evento, podrás acceder a salas de chat en Discord para conocer a la comunidad y charlar sobre lo que quieras."),
         print_text("¡Anímate a descubrir el poder de la comunidad!"),
         button(
-            constants.NETWORKING_URL,
+            constants.DISCORD_URL,
             "Salas de networking",
             "discord"
         ),

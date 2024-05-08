@@ -57,33 +57,33 @@ def header() -> rx.Component:
                     "twitch.tv/mouredev",
                     "twitch"
                 ),
-                # button(
-                #     constants.EVENT_URL,
-                #     "Crear recordatorio",
-                #     "discord"
-                # ),
+                button(
+                    constants.DISCORD_URL,
+                    "discord.gg/mouredev",
+                    "discord"
+                ),
                 flex_direction=["column", "row"],
                 spacing=Size.DEFAULT.value
             ),
-            rx.link(
-                rx.hstack(
-                    rx.icon(
-                        "radio",
-                        size=32,
-                        color="crimson",
-                        class_name="blink"
-                    ),
-                    rx.heading(
-                        "En directo",
-                        # id="countdown",
-                        color=Color.PRIMARY.value
-                    ),
-                    spacing=Size.SMALL.value,
-                    align="center"
-                ),
-                href=constants.TWITCH_URL,
-                is_external=True
-            ),
+            # rx.link(
+            #     rx.hstack(
+            #         rx.icon(
+            #             "radio",
+            #             size=32,
+            #             color="crimson",
+            #             class_name="blink"
+            #         ),
+            #         rx.heading(
+            #             "En directo",
+            #             # id="countdown",
+            #             color=Color.PRIMARY.value
+            #         ),
+            #         spacing=Size.SMALL.value,
+            #         align="center"
+            #     ),
+            #     href=constants.TWITCH_URL,
+            #     is_external=True
+            # ),
             rx.link(
                 "#HolaMundoDay",
                 href="https://twitter.com/hashtag/HolaMundoDay",

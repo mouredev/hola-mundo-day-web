@@ -25,16 +25,16 @@ def info() -> rx.Component:
                 spacing=Size.SMALL.value
             ),
             text(
-                "¡El Hola Mundo day ha comenzado!",
+                "¡Nos vemos en el Hola Mundo day 2025!",
                 big=True,
                 color=Color.BACKGROUND
             ),
-            button(
-                constants.TWITCH_URL,
-                "En directo",
-                icon="radio",
-                is_external=True
-            ),
+            # button(
+            #     constants.TWITCH_URL,
+            #     "En directo",
+            #     icon="radio",
+            #     is_external=True
+            # ),
             spacing=Size.SMALL.value,
             padding_y=SizeEM.MEDIUM.value,
             style=styles.container
